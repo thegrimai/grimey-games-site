@@ -1,1 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><title>Grimey Games mask</title><defs><linearGradient id="cast" gradientUnits="userSpaceOnUse" x1="24" y1="9" x2="73" y2="93"><stop stop-color="#855721"/><stop offset=".24" stop-color="#eed08a"/><stop offset=".38" stop-color="#fff0c7"/><stop offset=".48" stop-color="#c5974a"/><stop offset=".63" stop-color="#9c652c"/><stop offset=".76" stop-color="#eac16e"/><stop offset="1" stop-color="#815723"/></linearGradient></defs><g transform="translate(0 2)" fill="#402509"><path fill-rule="evenodd" d="M11 13 34 20 45 15 58 15 69 19 87 9 84 29 91 43 84 63 72 72 66 85 32 85 25 72 12 65 6 47 12 32 6 20 16 24Z M16 41 39 44 42 53 22 52Z M52 43 81 37 75 50 53 53Z M43 54 49 50 55 58 47 61Z M26 66 37 67 40 73 45 67 60 66 64 71 69 64 76 61 72 70 64 76 39 78 30 74Z"/></g><g fill="url(#cast)" stroke="#f4d88c" stroke-width=".6" stroke-linejoin="round"><path fill-rule="evenodd" d="M11 13 34 20 45 15 58 15 69 19 87 9 84 29 91 43 84 63 72 72 66 85 32 85 25 72 12 65 6 47 12 32 6 20 16 24Z M16 41 39 44 42 53 22 52Z M52 43 81 37 75 50 53 53Z M43 54 49 50 55 58 47 61Z M26 66 37 67 40 73 45 67 60 66 64 71 69 64 76 61 72 70 64 76 39 78 30 74Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96 96">
+  <title>Grimey Games cat skull — Notched Ear</title>
+  <defs>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="16" y1="7" x2="65" y2="90">
+      <stop offset="0" stop-color="#855124"/>
+      <stop offset=".20" stop-color="#d6a85b"/>
+      <stop offset=".34" stop-color="#f4d58d"/>
+      <stop offset=".47" stop-color="#edc273"/>
+      <stop offset=".58" stop-color="#af742c"/>
+      <stop offset=".76" stop-color="#d5a451"/>
+      <stop offset=".91" stop-color="#f3ce85"/>
+      <stop offset="1" stop-color="#94612a"/>
+    </linearGradient>
+    <path id="skull" fill-rule="evenodd" clip-rule="evenodd" d="M8 7 34 19 46 16 58 16 66 19 88 9 85 31 91 42 86 58 70 70 65 82 56 86 34 83 27 74 25 68 11 61 5 47 12 32 6 20 15 23 Z
+      M13 37 33 41 42.5 46 40 52.5 27 52 21 49 Z
+      M52 43 81.5 35 77.5 45.5 71 49.5 55 52 51 48 Z
+      M42.5 54.5 47.5 50.5 53.5 53.5 51 58.5 46.5 61.5 Z
+      M22 60.5 33 64.5 37.5 72 40.5 66.5 53.5 65.5 58.5 70.5 63 61.5 75 57.5 69.5 67.5 60 75 39 77 29 71.5 Z"/>
+    <clipPath id="face"><use xlink:href="#skull"/></clipPath>
+  </defs>
+  <use xlink:href="#skull" fill="#543719" transform="translate(0 1.1)"/>
+  <use xlink:href="#skull" fill="url(#gold)"/>
+  <g clip-path="url(#face)">
+    <path fill="#6b441e" opacity=".62" d="M10 11 32 20 19 24 15 23 Z"/>
+    <path fill="#805226" opacity=".45" d="M88 9 80 28 70 23 66 19 Z"/>
+    <path fill="#f3d487" opacity=".45" d="M5 47 17 39 25 51 17 53 11 61 Z"/>
+    <path fill="#865a28" opacity=".60" d="M11 61 22 58 29 66 27 74 25 68 Z"/>
+    <path fill="#ffe7ae" opacity=".47" d="M91 42 85 56 69 62 72 55 Z"/>
+    <path fill="#865725" opacity=".38" d="M27 74 38 78 55 77 65 73 56 86 34 83 Z"/>
+    <path fill="#f3d38b" opacity=".40" d="M34 19 46 16 58 16 66 19 48 21 Z"/>
+  </g>
+  <use xlink:href="#skull" fill="none" stroke="#f7d792" stroke-opacity=".74" stroke-width=".55" stroke-linejoin="round"/>
+  <path d="M13 37 32.5 41 42 45.5 M52.5 42.5 81 35 M11 60.5 22 64.5" fill="none" stroke="#fff0c0" stroke-opacity=".70" stroke-width=".75" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

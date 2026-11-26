@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://grimey.games/">
 <meta property="og:title" content="Grimey Games">
-<meta property="og:description" content="Grimey Games is an independent studio developing Exactly $20 and Realms of Yore.">
+<meta property="og:description" content="Grimey Games is an independent studio making Exactly $20, Grimea and Realms of Yore.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://grimey.games/">
 <meta name="theme-color" content="#060605">
-<meta name="description" content="Grimey Games is an independent studio developing Exactly $20 and Realms of Yore.">
+<meta name="description" content="Grimey Games is an independent studio making Exactly $20, Grimea and Realms of Yore.">
 <title>Grimey Games</title>
 <link rel="icon" href="media/studio-mask-flat.svg" type="image/svg+xml">
 <link rel="stylesheet" href="site.css">
@@ -18,16 +19,16 @@
 <body class="studio">
 <a class="skip" href="#main">Skip to content</a>
 <header class="mast"><div class="wrap mast-row">
-<a class="brand" href="index.html" aria-label="Grimey Games home"><img src="media/studio-mask.svg" alt="" width="34" height="34"><span>Grimey Games</span></a>
-<nav class="nav-wide" aria-label="Main"><a href="index.html" aria-current="page">Studio</a><a href="exactly-20.html">Exactly $20</a><a href="realms-of-yore.html">Realms of Yore</a><a href="press.html">Press</a><a href="support.html">Support</a></nav>
-<details class="nav-menu"><summary aria-label="Menu"><span></span><span></span></summary><nav aria-label="Main (mobile)"><a href="index.html" aria-current="page">Studio</a><a href="exactly-20.html">Exactly $20</a><a href="realms-of-yore.html">Realms of Yore</a><a href="press.html">Press</a><a href="support.html">Support</a></nav></details>
+<a class="brand" href="index.html" aria-label="Grimey Games home"><img src="media/studio-mask.svg" alt="" width="38" height="38"><span>Grimey Games</span></a>
+<nav class="nav-wide" aria-label="Main"><a href="index.html" data-nav="index" aria-current="page">Studio</a><details class="nav-games"><summary>Games <span aria-hidden="true">▾</span></summary><div class="nav-games-list"><a href="exactly-20.html" data-nav="exactly-20">Exactly $20</a><a href="grimea.html" data-nav="grimea">Grimea</a><a href="realms-of-yore.html" data-nav="realms-of-yore">Realms of Yore</a></div></details><a href="press.html" data-nav="press">Press</a><a href="support.html" data-nav="support">Support</a></nav>
+<details class="nav-menu"><summary aria-label="Menu"><span></span><span></span></summary><nav aria-label="Main (mobile)"><a href="index.html" data-nav="index" aria-current="page">Studio</a><span class="nav-head">Games</span><a href="exactly-20.html" data-nav="exactly-20" class="nav-game-link">Exactly $20</a><a href="grimea.html" data-nav="grimea" class="nav-game-link">Grimea</a><a href="realms-of-yore.html" data-nav="realms-of-yore" class="nav-game-link">Realms of Yore</a><a href="press.html" data-nav="press">Press</a><a href="support.html" data-nav="support">Support</a></nav></details>
 </div></header>
 <main id="main" tabindex="-1">
-<section class="studio-hero">
+<section class="studio-hero studio-home">
   <div class="hero-rays" aria-hidden="true"></div>
   <div class="wrap studio-hero-inner rise">
-    <img class="hero-mask" src="media/studio-mask.svg" alt="" width="200" height="200">
-    <h1 class="gold">Grimey Games</h1>
+    <img class="hero-mask" src="media/studio-mask.svg" alt="" width="232" height="232">
+    <h1 class="studio-wordmark">Grimey Games</h1>
     <a class="btn gold-btn" href="#games">See the games <span aria-hidden="true">↓</span></a>
   </div>
 </section>
@@ -36,47 +37,61 @@
   <div class="wrap">
     <div class="rule-title"><span></span><h2 id="games-title">The games</h2><span></span></div>
     <div class="door-grid">
-      <a class="door door-e20 reveal" href="exactly-20.html">
-        <div class="door-art"><img class="pixel" src="media/e20-yeolde-art.png" alt="A red dragon waits at a pixel-art fuel pump outside a castle at night." width="1344" height="756"></div>
+      <a class="door door-e20 reveal" href="exactly-20.html" aria-labelledby="card-e20" aria-describedby="status-e20">
+        <div class="door-art"><img class="pixel" src="media/e20-yeolde-art.png" alt="A red dragon waits at a pixel-art fuel pump outside a castle at night." width="1344" height="756" loading="lazy"></div>
         <div class="door-body">
           <p class="door-genre">Precision arcade · Pixel art</p>
           <h3 class="e20-logo"><span>Exactly</span> <b>$20</b></h3>
-          <p>Stop the pump on the exact cent. Then a dragon pulls in, the tower calls a hold, and the price disappears.</p>
-          <p class="door-meta"><i></i>In development · Android and Steam</p>
-          <span class="door-go">Explore Exactly $20 <span aria-hidden="true">→</span></span>
+          <p>The night shift starts with a twenty-dollar fill. Work your way up the road and you’ll be pumping jet fuel under tower orders and watching a dragon scorch your gauge.</p>
+          <p class="door-meta" id="status-e20">Coming soon to Google Play · Steam in development</p>
+          <span class="door-go" id="card-e20">Explore Exactly $20 <span aria-hidden="true">→</span></span>
         </div>
       </a>
-      <a class="door door-roy reveal" href="realms-of-yore.html">
-        <div class="door-art"><img src="media/roy-nov24-ui-human.webp" alt="A painted autumn valley with a river, cottages, fields and villagers at work." width="1440" height="900"></div>
+      <a class="door door-grimea reveal" href="grimea.html" aria-labelledby="card-grimea" aria-describedby="status-grimea">
+        <div class="door-art"><img src="media/grimea-bg-wayshrine-of-candles.webp" alt="A ruined roadside shrine at dusk, its votive candles burned down to black stubs." width="960" height="640" loading="lazy"></div>
+        <div class="door-body">
+          <p class="door-genre">Dark fantasy RPG · Pixel art</p>
+          <h3 class="grimea-logo">Grimea</h3>
+          <p>Four strangers wake at the far edges of Prima Nocta. Choose whose road to walk first. When their paths cross, you’ll have a reason to go back to the doors you left unopened.</p>
+          <p class="door-meta" id="status-grimea">Fae Village alpha · Windows · $5 USD or more</p>
+          <span class="door-go" id="card-grimea">Explore Grimea <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="door door-roy reveal" href="realms-of-yore.html" aria-labelledby="card-roy" aria-describedby="status-roy">
+        <div class="door-art"><img src="media/roy-nov24-ui-human.webp" alt="A painted autumn valley with a river, cottages, fields and villagers at work." width="1440" height="900" loading="lazy"></div>
         <div class="door-body">
           <p class="door-genre">Fantasy kingdom simulation</p>
           <h3 class="roy-logo">Realms <em>of</em> Yore</h3>
-          <p>Found a realm and rule from the hall. Fund the work, post the bounties, and let your people decide whose call to answer.</p>
-          <p class="door-meta"><i></i>In development · Android</p>
-          <span class="door-go">Explore Realms of Yore <span aria-hidden="true">→</span></span>
+          <p>Your people have farms to tend and reasons to turn down a royal bounty. Win a realm by treaty or siege, then choose who carries your banner into the next.</p>
+          <p class="door-meta" id="status-roy">In development · Android</p>
+          <span class="door-go" id="card-roy">Explore Realms of Yore <span aria-hidden="true">→</span></span>
         </div>
       </a>
     </div>
   </div>
 </section>
 
-<section class="studio-about">
+<section class="studio-about" aria-labelledby="about-title">
   <div class="wrap about-grid reveal">
-    <div><p class="eyebrow">The studio</p><h2 class="gold">Small studio. Two worlds.</h2></div>
+    <div><p class="eyebrow">The studio</p><h2 class="gold" id="about-title">Behind the gold mask.</h2></div>
     <div class="about-copy">
-      <p>Grimey Games makes games for phones and PC. Questions, press or a problem with a build: <a class="inline-mail" href="mailto:hello@grimey.games">hello@grimey.games</a>.</p>
-      <div class="about-links"><a href="press.html">Press kit <span aria-hidden="true">→</span></a><a href="support.html">Support <span aria-hidden="true">→</span></a><a href="studio-privacy.html">Privacy Policy <span aria-hidden="true">→</span></a></div>
+      <p>Grimey Games is the independent games label of GrimAI, Inc. To get in touch with the studio, write to <a class="inline-mail" href="mailto:hello@grimey.games">hello@grimey.games</a>.</p>
+      <div class="about-links"><a href="press.html">Press kit <span aria-hidden="true">→</span></a><a href="support.html">Game support <span aria-hidden="true">→</span></a></div>
     </div>
   </div>
 </section>
 </main>
 <footer class="foot"><div class="wrap foot-grid">
-<div class="foot-brand"><a class="brand" href="index.html"><img src="media/studio-mask.svg" alt="" width="40" height="40"><span>Grimey Games</span></a>
+<div class="foot-brand"><a class="brand" href="index.html"><img src="media/studio-mask.svg" alt="" width="44" height="44"><span>Grimey Games</span></a>
 <p>Independent games for phones and PC.</p><a class="foot-mail" href="mailto:hello@grimey.games">hello@grimey.games</a></div>
-<nav aria-label="Grimey Games policies"><strong>Grimey Games</strong><a href="studio-privacy.html">Privacy Policy</a><a href="studio-terms.html">Terms of Service</a><a href="support.html">Support</a></nav><nav aria-label="Exactly $20 policies"><strong>Exactly $20</strong><a href="exactly-20-privacy.html">Privacy Policy</a><a href="exactly-20-terms.html">Terms of Service</a><a href="exactly-20-support.html">Support</a></nav><nav aria-label="Realms of Yore policies"><strong>Realms of Yore</strong><a href="realms-of-yore-privacy.html">Privacy Policy</a><a href="realms-of-yore-terms.html">Terms of Service</a><a href="realms-of-yore-support.html">Support</a></nav>
+<nav aria-label="Studio resources"><strong>Studio</strong><a href="studio-privacy.html">Privacy Policy</a><a href="studio-terms.html">Terms of Service</a><a href="support.html">Support</a></nav><nav aria-label="Exactly $20 resources"><strong>Exactly $20</strong><a href="exactly-20-privacy.html">Privacy Policy</a><a href="exactly-20-terms.html">Terms of Service</a><a href="exactly-20-support.html">Support</a></nav><nav aria-label="Grimea resources"><strong>Grimea</strong><a href="grimea.html">Game page</a><a href="https://grimea.itch.io/grimea-alpha">Alpha on itch.io</a><a href="grimea-support.html">Support</a></nav><nav aria-label="Realms of Yore resources"><strong>Realms of Yore</strong><a href="realms-of-yore-privacy.html">Privacy Policy</a><a href="realms-of-yore-terms.html">Terms of Service</a><a href="realms-of-yore-support.html">Support</a></nav>
 </div><div class="wrap foot-note">© 2026 GrimAI, Inc. All rights reserved. <a href="press.html">Press kit</a></div></footer>
-<dialog id="viewer" aria-labelledby="viewer-title"><div class="viewer-bar"><span id="viewer-title">Image</span>
+<dialog id="viewer" aria-labelledby="viewer-title">
+<div class="viewer-bar"><span id="viewer-title">Image</span>
+<button type="button" data-size aria-controls="viewer-viewport" hidden>View full size</button>
 <button type="button" data-close aria-label="Close">×</button></div>
-<img id="viewer-image" alt=""><div class="viewer-bar"><button type="button" data-prev aria-label="Previous image">←</button>
-<p id="viewer-caption" aria-live="polite"></p><button type="button" data-next aria-label="Next image">→</button></div></dialog>
+<div id="viewer-viewport" role="region" aria-label="Image detail" tabindex="-1"><img id="viewer-image" alt=""></div>
+<div class="viewer-bar"><button type="button" data-prev aria-label="Previous image">←</button>
+<p id="viewer-caption" aria-live="polite"></p><button type="button" data-next aria-label="Next image">→</button></div>
+</dialog>
 </body></html>
