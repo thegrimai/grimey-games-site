@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <title>Notched Ear cheek surface</title>
+  <!-- Fixed in the studio-mask.svg coordinate system while the socket cutout changes. -->
+  <defs>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="16" y1="7" x2="65" y2="90">
+      <stop offset="0" stop-color="#855124"/>
+      <stop offset=".20" stop-color="#d6a85b"/>
+      <stop offset=".34" stop-color="#f4d58d"/>
+      <stop offset=".47" stop-color="#edc273"/>
+      <stop offset=".58" stop-color="#af742c"/>
+      <stop offset=".76" stop-color="#d5a451"/>
+      <stop offset=".91" stop-color="#f3ce85"/>
+      <stop offset="1" stop-color="#94612a"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#gold)" d="M49.5 42 83.5 32.5 84 35 79 47.5 72 52 55 54 49 49 48.8 46Z"/>
+</svg>

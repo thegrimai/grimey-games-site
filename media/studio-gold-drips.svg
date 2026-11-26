@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 44" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="gold">
+      <stop stop-color="#ac7834"/><stop offset=".25" stop-color="#e0b65f"/>
+      <stop offset=".4" stop-color="#fae2a3"/><stop offset=".54" stop-color="#edc77b"/>
+      <stop offset=".8" stop-color="#c4984d"/><stop offset="1" stop-color="#91612c"/>
+    </linearGradient>
+  </defs>
+  <!-- Each twenty-unit cell has its own shoulder, narrowing neck and rounded tip. -->
+  <g fill="url(#gold)">
+    <path d="M1 0H19C18 5 14 6 13 13C12 20 12 25 15 31C18 37 15 42 11 43C6 44 3 40 4 35C5 29 8 25 7 17C7 10 4 5 1 2Z"/>
+    <path d="M21 0H39C38 5 34 6 33 12C32 19 33 24 36 30C39 36 37 42 32 43C26 45 22 40 24 34C26 28 28 24 27 17C26 10 24 6 21 2Z"/>
+    <path d="M41 0H59C54 6 53 10 53 16C53 23 55 27 56 32C58 39 55 43 51 43C46 43 45 39 47 33C49 28 51 23 50 17C49 10 45 6 41 3Z"/>
+  </g>
+  <g fill="none" stroke="#fff0bd" stroke-width="1.1" stroke-linecap="round" opacity=".78">
+    <path d="M8 31Q5.8 36 7.4 39"/><path d="M28.1 31.4Q25.4 37 27.5 40"/>
+    <path d="M50.1 31.6Q47.1 36.6 49 40"/>
+  </g>
+</svg>

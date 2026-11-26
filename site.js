@@ -2,6 +2,27 @@
 (() => {
   document.documentElement.classList.add('js');
 
+  // A nested 404 uses a site-root base for its assets. Keep its skip link on the requested URL.
+  if (document.querySelector('base[href]')) {
+    const mainURL = new URL(location.href);
+    mainURL.hash = 'main';
+    document.querySelector('.skip').href = mainURL.href;
+  }
+
+  // Start both halves of the logo on the same frame, even on a cold load.
+  const studioHero = document.querySelector('.studio-home');
+  const skull = studioHero?.querySelector('.hero-mask img');
+  if (skull?.decode && document.fonts && matchMedia('(prefers-reduced-motion: no-preference) and (forced-colors: none)').matches) {
+    studioHero.dataset.logoIntro = 'waiting';
+    const showStill = () => { delete studioHero.dataset.logoIntro; };
+    const fallback = setTimeout(showStill, 2500);
+    Promise.all([skull.decode(), document.fonts.load('1em "Germania One"', 'Grimey Games')])
+      .then(() => {
+        if (studioHero.dataset.logoIntro === 'waiting') studioHero.dataset.logoIntro = 'ready';
+      }, showStill)
+      .finally(() => clearTimeout(fallback));
+  }
+
   // The masthead menus retain native details/summary keyboard behavior.
   document.querySelectorAll('.nav-menu, .nav-games').forEach(menu => {
     const summary = menu.querySelector('summary');
@@ -87,6 +108,74 @@
     window.addEventListener('load', schedule);
     window.addEventListener('hashchange', schedule);
     schedule();
+  }
+
+  // The gallery backdrop follows mouse hover and keyboard focus.
+  const shelf = document.querySelector('.doors');
+  if (shelf) {
+    const scenes = shelf.querySelector('.door-scenes');
+    const hover = matchMedia('(any-hover: hover)');
+    const cards = Array.from(shelf.querySelectorAll('.door'), article => ({
+      article, link: article.querySelector('.door-go'), image: article.querySelector('.door-art img'), scene: null
+    }));
+    let active = null, hovered = null, focused = null;
+
+    function makeScene(card) {
+      const image = new Image();
+      image.alt = '';
+      image.className = 'door-scene';
+      image.classList.toggle('pixel', card.image.classList.contains('pixel'));
+      image.src = card.image.currentSrc || card.image.src;
+      scenes.append(image);
+      return image;
+    }
+
+    function paint() {
+      const shown = active && active.image.naturalWidth && active.article.getClientRects().length ? active : null;
+      if (shown) {
+        const palette = getComputedStyle(shown.article);
+        document.body.style.setProperty('--scene-accent', palette.getPropertyValue('--door-accent'));
+        document.body.style.setProperty('--scene-panel', palette.getPropertyValue('--door-panel'));
+        if (!shown.scene) shown.scene = makeScene(shown);
+      } else {
+        document.body.style.removeProperty('--scene-accent');
+        document.body.style.removeProperty('--scene-panel');
+      }
+      document.body.toggleAttribute('data-game-preview', Boolean(shown));
+      for (const card of cards) {
+        card.article.classList.toggle('is-preview', card === shown);
+        card.scene?.classList.toggle('is-active', card === shown);
+      }
+    }
+
+    function select(card) {
+      if (active === card) return;
+      active = card;
+      paint();
+    }
+    function clear() { hovered = focused = null; select(null); }
+    for (const card of cards) {
+      card.image.addEventListener('load', () => { if (active === card) paint(); });
+      card.article.addEventListener('pointerenter', event => {
+        if (event.pointerType === 'touch' || !hover.matches) return;
+        hovered = card;
+        select(card);
+      });
+      card.article.addEventListener('pointerleave', () => {
+        if (hovered === card) { hovered = null; select(focused); }
+      });
+      card.link.addEventListener('focus', () => {
+        if (card.link.matches(':focus-visible')) { focused = card; select(card); }
+      });
+      card.link.addEventListener('blur', () => {
+        if (focused === card) { focused = null; select(hovered); }
+      });
+    }
+    document.addEventListener('pointerdown', event => { if (event.pointerType === 'touch') clear(); }, {passive:true});
+    window.addEventListener('blur', clear);
+    window.addEventListener('pagehide', clear);
+    window.addEventListener('hashchange', () => { if (!shelf.getClientRects().length) clear(); });
+    hover.addEventListener('change', () => { if (!hover.matches) { hovered = null; select(focused); } });
   }
 
   // Reveal on scroll.
